@@ -10,5 +10,7 @@ class Home(View):
     def get(self, request):
 
         MiModelo(nombre='Javier').save()
+
+        lista = MiModelo.objects.all()
         
-        return render(request, 'home.html', {})
+        return render(request, 'home.html', {'lista': lista})
