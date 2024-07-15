@@ -76,9 +76,14 @@ WSGI_APPLICATION = 'test_deploy.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
+    #  'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'jneus$apoyo_alumnos',
+    #     'USER': 'jneus',
+    #     'PASSWORD': 'jenv18163',
+    #     'HOST': 'jneus.mysql.pythonanywhere-services.com',
+    #     'PORT': '3306',
+
     # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
