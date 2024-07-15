@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qt=3ijo&!7m^6!x=^5-+z=&8rqrh86qy6k2!!oh*63w7*d=%aq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jneus.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -76,9 +76,20 @@ WSGI_APPLICATION = 'test_deploy.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bakenem4_test_deploy',
+        'USER': 'bakenem4_jneus',
+        'PASSWORD': 'jenv18163',
+        'HOST': '108.167.149.245', 
+        'PORT': '3306',  
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
 
